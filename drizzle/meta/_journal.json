@@ -8,6 +8,20 @@
       "when": 1768216949736,
       "tag": "0000_curved_ben_parker",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1768244172950,
+      "tag": "0001_lethal_xavin",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1768244789304,
+      "tag": "0002_classy_kate_bishop",
+      "breakpoints": true
     }
   ]
 }
