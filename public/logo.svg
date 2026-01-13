@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120">
+  <!-- Background -->
+  <rect width="400" height="120" fill="#ffffff" rx="8"/>
+  
+  <!-- Icon Container -->
+  <g transform="translate(20, 20)">
+    <!-- Bracket Symbol -->
+    <path d="M 15 10 L 5 10 Q 0 10 0 15 L 0 65 Q 0 70 5 70 L 15 70" 
+          stroke="#F59E0B" 
+          stroke-width="4" 
+          fill="none" 
+          stroke-linecap="round"/>
+    <path d="M 45 10 L 55 10 Q 60 10 60 15 L 60 65 Q 60 70 55 70 L 45 70" 
+          stroke="#F59E0B" 
+          stroke-width="4" 
+          fill="none" 
+          stroke-linecap="round"/>
+    
+    <!-- Code Symbol (forward slash) -->
+    <line x1="38" y1="20" x2="22" y2="60" 
+          stroke="#F59E0B" 
+          stroke-width="4" 
+          stroke-linecap="round"/>
+    
+    <!-- Dots representing "mate" connection -->
+    <circle cx="70" cy="25" r="3.5" fill="#F59E0B"/>
+    <circle cx="70" cy="40" r="3.5" fill="#F59E0B"/>
+    <circle cx="70" cy="55" r="3.5" fill="#F59E0B"/>
+  </g>
+  
+  <!-- Text: CodeMate -->
+  <text x="110" y="65" font-family="'Inter', 'Segoe UI', Arial, sans-serif" font-size="42" font-weight="700" fill="#1F2937">
+    Code<tspan fill="#F59E0B">Mate</tspan>
+  </text>
+  
+  <!-- Tagline (optional) -->
+  <text x="110" y="85" font-family="'Inter', 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="400" fill="#6B7280" letter-spacing="0.5">
+    YOUR CODING COMPANION
+  </text>
+</svg>

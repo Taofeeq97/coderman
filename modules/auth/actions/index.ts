@@ -3,13 +3,17 @@
 import { db } from "@/lib/db";
 import { usersTable } from "@/lib/db/schema";
 import { eq } from "drizzle-orm";
-import { currentUser } from "@clerk/nextjs/server";
+import {  currentUser } from "@clerk/nextjs/server";
 
 
 export const onBoardUser = async () => {
     const clerkUser = await currentUser();
     if (!clerkUser) {
-        throw new Error("User not found");
+        return {
+            success:false,
+            data:null,
+            message: "User not found"
+        };
     }
     const [existingUser] = await db.select().from(usersTable).where(eq(usersTable.clerkId, clerkUser.id));
     if (existingUser) {
@@ -33,4 +37,14 @@ export const onBoardUser = async () => {
         data:newUser,
         message: "user created successfully"
     }
+}
+
+
+export const getCurrentUserRole = async () => {
+    const user = await currentUser();
+    if (!user) {
+        return null;
+    }
+    const [existingUser] = await db.select({role:usersTable.role}).from(usersTable).where(eq(usersTable.clerkId, user.id));
+    return existingUser?.role;
 }
